@@ -4,8 +4,186 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styes/main.css">
 </head>
 <body>
-    
+    <header class="header container">
+        <h1>
+            <img src="./svg/logo.svg" alt="polar express logo">
+        </h1>
+        <nav class="nav">
+            <menu class="menu menu__links">
+                <li><a class="navigation_link" href="#">Tracking</a></li>
+                <li><a class="navigation_link" href="#">Shiping</a></li>
+                <li><a class="navigation_link" href="#">Services</a></li>
+            </menu>
+
+            <menu class="menu menu__icons">
+                <li><img src="./svg/glass.svg" alt="glass"></li>
+                <li><img src="./svg/usa_flag.svg" alt="usa flag"></li>
+                <li><img src="./svg/figure.svg" alt="figure"></li>
+            </menu>
+        </nav>
+    </header>
+    <main class="container main_container">
+        <h2 class="main-title">Sign Up</h2>
+
+        <div class="login-form-wrapper">
+            <h3 class="form-title">Login & Ship</h3>
+            <form class="login-form">
+                <label class="form-item__wrapper half-size">
+                    <span class="label-description">First name</span>
+                    <input class="form-item" type="text" placeholder="First name">
+                </label>
+                
+                <label class="form-item__wrapper half-size">
+                    <span class="label-description">Last name</span>
+                    <input class="form-item" type="text" placeholder="Last name">
+                </label>
+                
+                <label class="form-item__wrapper full-size">
+                    <span class="label-description">Email</span>
+                    <input type="email" class="form-item" type="text" placeholder="usermail@example.com">
+                </label>
+                
+                <label class="form-item__wrapper quarter-size">
+                    <span class="label-description">Country</span>
+                    <input class="form-item" type="text" placeholder="+380">
+                </label>
+                
+                <label class="form-item__wrapper quarter-size">
+                    <span class="label-description">Code</span>
+                    <input class="form-item" type="text" placeholder="063">
+                </label>
+                
+                <label class="form-item__wrapper half-size">
+                    <span class="label-description">Phone number</span>
+                    <input class="form-item" type="text" placeholder="(063) 123-45-67">
+                </label>
+                
+                <label class="form-item__wrapper full-size">
+                    <span class="label-description">Username</span>
+                    <input class="form-item" type="text" placeholder="Florina23">
+                </label>
+                
+                <label class="form-item__wrapper full-size">
+                    <span class="label-description">Password</span>
+                    <input class="form-item" type="password" placeholder="Password">
+                </label>
+
+            </form>
+            
+            <button class="sign-up__button">Sign up</button>
+
+            <span class="social-proposal">or continue with</span>
+            
+            <menu class="social-links__menu">
+                <li class="social-links__item">
+                    <a href="#"><img src="./svg/google.svg" alt="google"></a>
+                </li>
+
+                <li class="social-links__item">
+                    <a href="#"><img src="./svg/apple.svg" alt="apple"></a>
+                </li>
+
+                <li class="social-links__item">
+                    <a href="#"><img src="./svg/facebook.svg" alt="facebook"></a>
+                </li>
+            </menu>
+        </div>
+    </main>
+
+    <footer class="footer container">
+        <div class="customer-service__wrapper">
+            <h3 class="footer-header">Customer Service</h3>
+            <menu class="footer-menu customer-service">
+                <li>
+                    <a class="footer-menu__link" href="#">Help center</a>
+                </li>
+                
+                <li>
+                    <a class="footer-menu__link" href="#">Claims Support</a>
+                </li>
+            </menu>
+           
+            <h3 class="footer-header social-header">Follow PolarExpress</h3>
+            <menu class="footer-social-menu">
+                <li>
+                    <a href="#">
+                        <img src="./svg/footer-facebook.svg" alt="facebook">
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        <img src="./svg/footer-youtube.svg" alt="youtube">
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+                        <img src="./svg/footer-twitter.svg" alt="twitter">
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="#">
+                        <img src="./svg/footer-linkedin.svg" alt="linkedin">
+                    </a>
+                </li>
+            </menu>
+        </div>
+
+        <div class="site__wrapper">
+            <h3 class="footer-header">This Site</h3>
+
+            <menu class="footer-menu">
+                <li>
+                    <a class="footer-menu__link" href="#">Tracking</a>
+                </li>
+                <li>
+                    <a class="footer-menu__link" href="#">Shipping</a>
+                </li>
+                
+                <li>
+                    <a class="footer-menu__link" href="#">Services</a>
+                </li>
+            </menu>
+        </div>
+        
+        <div class="company-info__wrapper">
+            <h3 class="footer-header">Company Info</h3>
+
+            <menu class="footer-menu">
+                <li>
+                    <a class="footer-menu__link" href="#">
+                        About PE
+                        <img src="./svg/redirection.svg" alt="redirection">
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="footer-menu__link" href="#">
+                        Media Relations
+                        <img src="./svg/redirection.svg" alt="redirection">
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="footer-menu__link" href="#">
+                        Investor Relations
+                        <img src="./svg/redirection.svg" alt="redirection">
+                    </a>
+                </li>
+                
+                <li>
+                    <a class="footer-menu__link" href="#">Careers</a>
+                </li>
+            </menu>
+        </div>
+    </footer>
 </body>
 </html>
