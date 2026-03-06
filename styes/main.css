@@ -5,8 +5,11 @@
 }
 
 body {
+    display: flex;
+    flex-direction: column;
     max-width: 1440px;
     margin: 0 auto;
+    min-height: 100vh;
     background-color: #F5F5F5;
     font-family: 'Roboto';
 }
@@ -50,6 +53,7 @@ menu {
 }
 
 .main_container {
+    flex-grow: 1;
     padding-top: 30px;
     background: 
         white 
@@ -60,7 +64,8 @@ menu {
 
 .main-title {
     margin-bottom: 42px;
-    text-align: center;font-family: 'Roboto Flex';
+    text-align: center;
+    font-family: 'Roboto Flex';
     font-style: normal;
     font-weight: 600;
     font-size: 32px;
