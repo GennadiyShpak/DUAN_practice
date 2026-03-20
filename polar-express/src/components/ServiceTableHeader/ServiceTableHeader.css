@@ -1,0 +1,12 @@
+.table-item-wrapper {
+    display: flex;
+    width: 700px;
+}
+
+.table-item-wrapper > span {
+    width: 33.3%;
+    padding: 4px;
+    text-align: end;
+    border: 1px solid black;
+    border-collapse: collapse;
+}

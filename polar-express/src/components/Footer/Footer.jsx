@@ -1,4 +1,5 @@
 import FooterLink from "../FooterLink/FooterLink.jsx";
+import './Footer.css';
 
 const linkConfig = ['facebook', 'youtube', 'twitter', 'linkedin'];
 
