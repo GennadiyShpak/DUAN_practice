@@ -1,0 +1,12 @@
+.tooltip-wrapper {
+    position: absolute;
+    top: -30px;
+    background-color: aquamarine;
+    text-align: center;
+    border: 1px solid black ;
+}
+
+.hidden {
+    display: none;
+    visibility: hidden;
+}
