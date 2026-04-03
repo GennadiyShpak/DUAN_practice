@@ -1,0 +1,25 @@
+.wrapper {
+    padding: 10px 0;
+}
+
+.label {
+    display: flex;
+    gap: 5px;
+}
+
+.wrapper,
+.button-wrapper {
+    display: flex;
+    gap: 10px;
+}
+
+.button-wrapper {
+    margin-bottom: 10px;
+}
+
+.button-wrapper > button{
+    background-color: bisque    ;
+    border: 1px solid black;
+    padding: 5px 10px;
+    cursor: pointer;
+}
