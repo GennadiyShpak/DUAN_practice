@@ -1,4 +1,6 @@
 import Logo from "../../assets/svg/logo.jsx";
+import { Link, NavLink } from "react-router-dom";
+import './Header.css'
 
 const HEADER_STYLES = {
     display: 'flex',
@@ -27,18 +29,30 @@ const MENU_ICONS_STYLES = {
 }
 
 const Header = () => {
+    const onLinkActiveHandler = ({ isActive }) => {
+        return isActive ? 'active-link' : ''
+    }
+
     return (
         <header class="container" style={HEADER_STYLES}>
             <h1>
-                <a href="./index.html">
+                <Link to="/home">
                     <Logo/>
-                </a>
+                </Link>
             </h1>
             <nav style={NAV_STYLES}>
                 <menu className="menu" style={MENU_LINKS_STYLES}>
-                    <li><a style={NAVIGATION_LINK_STYLES} href="#">Tracking</a></li>
-                    <li><a style={NAVIGATION_LINK_STYLES} href="#">Shiping</a></li>
-                    <li><a style={NAVIGATION_LINK_STYLES} href="./services.html">Services</a></li>
+                    <li>
+                        <NavLink style={NAVIGATION_LINK_STYLES} className={onLinkActiveHandler} to="/tracking">Tracking</NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink style={NAVIGATION_LINK_STYLES} className={onLinkActiveHandler} to="/shiping">Shipping</NavLink>
+                    </li>
+
+                    <li>
+                        <NavLink style={NAVIGATION_LINK_STYLES} className={onLinkActiveHandler} to="/services">Services</NavLink>
+                    </li>
                 </menu>
 
                 <menu className="menu" style={MENU_ICONS_STYLES}>

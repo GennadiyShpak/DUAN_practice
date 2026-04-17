@@ -7,7 +7,7 @@ import { useEffect, useState } from "react";
 import Spinner from "../Spinner/Spinner.jsx";
 import AddServiceForm from "../AddServiceForm/AddServiceForm.jsx";
 
-const Main = () => {
+const Services = () => {
     const { services } = polarExpressData
     const [deliveryServices, setDeliveryServices] = useState([])
     const [isLoading, setIsLoading] = useState(false)
@@ -74,4 +74,4 @@ const Main = () => {
     </main>
 }
 
-export default Main;
+export default Services;

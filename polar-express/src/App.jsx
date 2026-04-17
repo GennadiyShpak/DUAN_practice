@@ -1,14 +1,15 @@
 import './App.css'
 import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
-import Main from "./components/Main/Main.jsx";
+import Main from "./components/Services/Services.jsx";
+import { Outlet } from 'react-router-dom';
 
 const App = () => {
   return (
     <div class="content-wrapper">
       <Header />
 
-      <Main/>
+      <Outlet/>
 
       <Footer />
     </div>
