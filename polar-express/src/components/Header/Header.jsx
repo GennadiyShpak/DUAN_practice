@@ -1,8 +1,12 @@
 import Logo from "../../assets/svg/logo.jsx";
 import { Link, NavLink } from "react-router-dom";
 import './Header.css';
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { LanguageContext } from "../../store/languge-context.jsx";
+import { useSelector, useDispatch } from 'react-redux';
+import Figure from "../../assets/svg/figure.jsx";
+import NotLoggedUser from "../../assets/svg/not-logged-user.jsx"
+import { modalActions } from '../../redux-store/modal-store.js'
 
 const HEADER_STYLES = {
     display: 'flex',
@@ -32,20 +36,25 @@ const MENU_ICONS_STYLES = {
 
 const Header = () => {
     const {lang, changeLanguage} = useContext(LanguageContext);
+    const isAuth = useSelector(state => state.auth.isAuth)
+    const dispatch = useDispatch();
 
     const onLinkActiveHandler = ({ isActive }) => {
         return isActive ? 'active-link' : ''
     }
 
     const onLanguageChangeHandler = () => {
-        console.log('Current language:', lang);
         changeLanguage();
+    }
+
+    const onAuthHandler = () => {
+        dispatch(modalActions.openModal())
     }
 
     const flagUrl = `../../../public/svg/usa_flag${lang.lang === 'en' ? '' : '_pirate'}.svg`;
 
     return (
-        <header class="container" style={HEADER_STYLES}>
+        <header className="container" style={HEADER_STYLES}>
             <h1>
                 <Link to="/home">
                     <Logo/>
@@ -69,7 +78,7 @@ const Header = () => {
                 <menu className="menu" style={MENU_ICONS_STYLES}>
                     <li><img src="../../../public/svg/glass.svg" alt="glass"/></li>
                     <li onClick={onLanguageChangeHandler}><img src={flagUrl} alt="usa flag"/></li>
-                    <li><img src="../../../public/svg/figure.svg" alt="figure"/></li>
+                    <li onClick={onAuthHandler}>{isAuth ? <Figure/> : <NotLoggedUser/>}</li>
                 </menu>
             </nav>
         </header>
