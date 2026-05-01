@@ -6,13 +6,18 @@ import './Main.css'
 import { useEffect, useState } from "react";
 import Spinner from "../Spinner/Spinner.jsx";
 import AddServiceForm from "../AddServiceForm/AddServiceForm.jsx";
+import { useContext } from "react";
+import { LanguageContext } from "../../store/languge-context.jsx";
 
 const Services = () => {
+    const {lang} = useContext(LanguageContext);
     const { services } = polarExpressData
     const [deliveryServices, setDeliveryServices] = useState([])
     const [isLoading, setIsLoading] = useState(false)
     const [error, setError] = useState(false)
     const [isAddServiceFormVisible, setIsAddServiceFormVisible] = useState(false)
+
+    const pageTitle = lang.lang === 'en' ? 'Service page' : 'Сторінка послуг';
 
     useEffect(() => {
         setIsLoading(true)
@@ -48,7 +53,7 @@ const Services = () => {
 
     return <main class="main_container">
         <h2 className={clsx('page-title')}>
-            Service page
+            {pageTitle}
         </h2>
 
         <button onClick={() => setIsAddServiceFormVisible(true)}>Add service</button>

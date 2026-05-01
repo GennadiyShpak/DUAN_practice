@@ -1,6 +1,8 @@
 import Logo from "../../assets/svg/logo.jsx";
 import { Link, NavLink } from "react-router-dom";
-import './Header.css'
+import './Header.css';
+import { useContext, useEffect } from "react";
+import { LanguageContext } from "../../store/languge-context.jsx";
 
 const HEADER_STYLES = {
     display: 'flex',
@@ -29,9 +31,18 @@ const MENU_ICONS_STYLES = {
 }
 
 const Header = () => {
+    const {lang, changeLanguage} = useContext(LanguageContext);
+
     const onLinkActiveHandler = ({ isActive }) => {
         return isActive ? 'active-link' : ''
     }
+
+    const onLanguageChangeHandler = () => {
+        console.log('Current language:', lang);
+        changeLanguage();
+    }
+
+    const flagUrl = `../../../public/svg/usa_flag${lang.lang === 'en' ? '' : '_pirate'}.svg`;
 
     return (
         <header class="container" style={HEADER_STYLES}>
@@ -57,7 +68,7 @@ const Header = () => {
 
                 <menu className="menu" style={MENU_ICONS_STYLES}>
                     <li><img src="../../../public/svg/glass.svg" alt="glass"/></li>
-                    <li><img src="../../../public/svg/usa_flag.svg" alt="usa flag"/></li>
+                    <li onClick={onLanguageChangeHandler}><img src={flagUrl} alt="usa flag"/></li>
                     <li><img src="../../../public/svg/figure.svg" alt="figure"/></li>
                 </menu>
             </nav>
