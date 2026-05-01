@@ -3,16 +3,19 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer/Footer'
 import Main from "./components/Services/Services.jsx";
 import { Outlet } from 'react-router-dom';
+import LanguageProvider from "./store/languge-context.jsx";
 
 const App = () => {
   return (
-    <div class="content-wrapper">
-      <Header />
+    <LanguageProvider>
+      <div class="content-wrapper">
+        <Header />
 
-      <Outlet/>
+        <Outlet/>
 
-      <Footer />
-    </div>
+          <Footer />
+        </div>
+    </LanguageProvider>
   )
 }
 
